@@ -1,0 +1,25 @@
+<h1>Create a new task</h1>
+
+<%= form_for @task do |f| %>
+
+  <%= f.hidden_field :user_id, {:value => current_user.id} %>
+  
+  <div class="row">
+    <%= f.label :title, 'Title: ' %>
+    <%= f.text_field :title, :size => 50 %>
+    <span>(required)</span>
+  </div><!-- row -->
+
+  <div class="row">
+    <%= f.label :due_on, 'Due: ' %>
+    <%= f.text_field :due_on %>
+  </div><!-- row -->
+
+  <div class="row">
+    <%= f.label :description, 'Description' %><br />
+    <%= f.text_area :description, :cols => 50, :rows => 4 %>
+  </div><!-- row -->
+
+  <%= f.submit 'Save' %>  
+
+<% end %>
