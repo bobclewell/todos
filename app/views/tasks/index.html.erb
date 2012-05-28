@@ -6,10 +6,10 @@
     <%= content_tag_for :li, task do %>
       <span class="handle">drag</span>
       <%= task.title %>
-      <% if task.description.present? %> - <%= task.description %><% end %><% if task.due_on %><%= task.due_on %><% end %>
+      <% if task.description.present? %> - <em><%= task.description %></em><% end %><% if task.due_on %><span class="due-date"><%= task.due_on %></span><% end %>
       <%= link_to 'completed', "completed/#{task.id}", { :class => 'completed' } %>
     <% end %>
   <% end %>
   </ul>
 
-<%= link_to 'New task', new_task_path %>
+<%= link_to 'New task', new_task_path, :class => 'btn' %>

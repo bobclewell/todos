@@ -1,3 +1,53 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$top_btn_color: #4D74F1;
+$bottom_btn_color: #234DD4;
+
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+#user_header {
+  background: #000F4D;
+  color: #eee;
+  margin: 0;
+  padding: 2px 6px;
+  a {
+    color: #eee;
+    // float: right;
+    &:hover {
+      color: #ff8;
+      text-decoration: none
+    }
+  }
+}
+
+#container {
+  padding: 15px;
+}
+
+.btn {
+  border: none;
+  border: 1px solid #00218D;
+  background-color: $bottom_btn_color;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top_btn_color), to($bottom_btn_color));
+  background-image: -webkit-linear-gradient(top, $top_btn_color, $bottom_btn_color);
+  background-image:    -moz-linear-gradient(top, $top_btn_color, $bottom_btn_color);
+  background-image:     -ms-linear-gradient(top, $top_btn_color, $bottom_btn_color);
+  background-image:      -o-linear-gradient(top, $top_btn_color, $bottom_btn_color);
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #F7F7F7;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin: 12px;
+  padding: 2px 6px;
+  text-decoration: none;
+  &:hover {
+    background-color: #032594;
+  }
+}
