@@ -15,17 +15,31 @@
 }
 
 #tasks li {
-  cursor: pointer;
   list-style: none;
   padding: 4px 0;
 }
 
-.handle {
-  background: #BECBFF;
+.handle, .completed {
   -moz-border-radius: 3px;
   border-radius: 3px;
-  color: #333;
   font-size: 0.6em;
   font-family: Arial;
   padding: 2px;
+}
+
+.handle {
+  background: #BECBFF;
+  color: #333;
+  cursor: pointer;
+}
+
+.completed {
+  background: #eee;
+  color: green;
+  padding: 2px 4px;
+  text-decoration: none;
+  &:hover {
+    background: green;
+    color: #eee;
+  }
 }
