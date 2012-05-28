@@ -1,9 +1,10 @@
-<h1>Log In</h1>
+<h1>Already have an account?</h1>
+<h2>Please log in</h2>
 
 <%= form_tag sessions_path do %>
   <div class="field">
-          <%= label_tag :email %><br />
-          <%= text_field_tag :email, params[:email] %>
+          <%= label_tag :email, 'Email: ' %>
+          <%= text_field_tag :email, params[:email], :size => 50 %>
   </div>
   <div class="actions"><%= submit_tag "Log In" %>
 <% end %>
