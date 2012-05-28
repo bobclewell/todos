@@ -1,5 +1,7 @@
 Todos::Application.routes.draw do
 
+  resources :tasks
+
   resources :sessions
   resources :users
 
