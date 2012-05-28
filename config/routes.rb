@@ -13,6 +13,8 @@ Todos::Application.routes.draw do
 
   root to: 'tasks#index'
 
+  get 'completed/:id' => 'tasks#completed'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

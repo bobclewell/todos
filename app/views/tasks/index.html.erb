@@ -1,5 +1,5 @@
 <h1>Task list for: <%= current_user.email %></h1>
-<em>Drag to re-order</em>
+<em>Drag to re-order. When done click completed.</em>
 
   <ul id="tasks" data-update-url="<%= sort_tasks_url %>">
   <% @tasks.each do |task| %>
@@ -7,6 +7,7 @@
       <span class="handle">drag</span>
       <%= task.title %>
       <% if task.description.present? %> - <%= task.description %><% end %><% if task.due_on %><%= task.due_on %><% end %>
+      <%= link_to 'completed', "completed/#{task.id}", { :class => 'completed' } %>
     <% end %>
   <% end %>
   </ul>
