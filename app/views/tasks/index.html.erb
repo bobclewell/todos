@@ -4,7 +4,7 @@
   <ul id="tasks" data-update-url="<%= sort_tasks_url %>">
   <% @tasks.each do |task| %>
     <%= content_tag_for :li, task do %>
-      <span class="handle">order</span>
+      <span class="handle">drag</span>
       <%= task.title %>
       <% if task.description.present? %> - <%= task.description %><% end %><% if task.due_on %><%= task.due_on %><% end %>
     <% end %>
