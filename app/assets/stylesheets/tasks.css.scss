@@ -13,3 +13,19 @@
   display: inline;
   padding: 6px; 
 }
+
+#tasks li {
+  cursor: pointer;
+  list-style: none;
+  padding: 4px 0;
+}
+
+.handle {
+  background: #BECBFF;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+  font-size: 0.6em;
+  font-family: Arial;
+  padding: 2px;
+}
